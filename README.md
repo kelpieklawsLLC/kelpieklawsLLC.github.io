@@ -1,47 +1,23 @@
-# Pixel Power — promotional website
+# Pixel Power website update — October 17, 2026
 
-A complete **responsive, static advertisement / landing page** based on the Pixel Power Swift app's real icon, sample photos, and feature list. No framework, npm installation, backend, or CDN is required.
+A static website for Pixel Power. This bundle contains `index.html`, `privacy.html`, and the supplied `LICENSE`.
 
-## Files
+## Publish
 
-- `index.html` — the advertisement page. **Standalone:** its CSS, JavaScript, icon, and product imagery are embedded. Double-click to open in a modern web browser or upload to any static host.
-- `privacy.html` — public-page version of the previously drafted privacy policy, using the same branding. **Not ready for publication** until you replace the placeholders and verify the content.
+Put `index.html`, `privacy.html`, and `LICENSE` in the root of your GitHub Pages repository (or any static website host). Keep the two HTML files together: the site links directly to `/privacy.html`, which matches the URL used by `PixelForge/Info.plist` (`https://kelpieklawsllc.github.io/privacy.html`).
 
-## How to try it
+## App Store link
 
-Open `index.html` in Chrome, Firefox, Safari, or Edge. The interactive preview allows you to:
+The project ZIP does not supply a verified live App Store listing URL. The page deliberately shows a launch-info dialog instead of directing visitors to an unrelated app. When your listing is public, open `index.html` and change:
 
-- Drag the divider to reveal more or less of the transformed image.
-- Switch between the three free-style illustrations: Pixel Pop, Sunset Glow, and Candy Dream.
-- Increase or decrease pixel size.
-- Try the included dog and landscape images.
-- Select your own JPEG, PNG, WebP, GIF, or AVIF photo (20 MB limit).
-- Download a 960 × 720 demonstration PNG.
+`const SETTINGS = { appStoreUrl: "" };`
 
-All demo effects run **inside the browser**; images aren't uploaded by this code. The JavaScript renderer is **an approximation for marketing**, not a port of Pixel Power's Swift processing engine. Static look thumbnails are likewise illustrations made from the app's bundled landscape artwork. No reviews, star ratings, or unverified App Store availability are claimed.
+to your verified App Store link, e.g. `https://apps.apple.com/app/idYOUR_APP_ID`. All App Store buttons will then open that URL. Adjust coming-soon text if release status changes.
 
-## Before publishing
+## Grounded content
 
-1. In `index.html`, find this settings line near the bottom:
+Verified against the supplied Swift source: 30 artistic presets (3 Free / 27 Pro), region editing, on-device foreground isolation, sprite export, PNG output, StoreKit Monthly and Lifetime Pro offerings, and no in-app account. The standalone policy was synchronized with `PixelForge/PrivacyPolicy.swift` as provided, particularly the monthly auto-renewal disclosure.
 
-   ```javascript
-   const SETTINGS = { appStoreUrl: "" };
-   ```
+The website's interactive browser demo is *not* the Swift image engine: demo outputs are illustrative approximations, and photo files stay in the browser. The website does not include analytics or third-party scripts.
 
-   Replace the empty string with your **real** published listing URL, for example `https://apps.apple.com/app/id1234567890`. Until then, both **Get Pixel Power** buttons intentionally open an honest *coming soon* message instead of a broken link. Use your real app ID; the example is not a valid listing link.
-2. In both `index.html` (the privacy dialog) and `privacy.html`, replace `REPLACE_WITH_YOUR_LEGAL_NAME_OR_BUSINESS` and `REPLACE_WITH_YOUR_SUPPORT_EMAIL` with real details.
-3. **Review the actual privacy terms with the release build and legal guidance as needed**, including treatment of images, temporary exports, purchases, website hosting logs, analytics, and possible future features. Keep the Swift privacy text, the website dialog, and `privacy.html` synchronized. Remove the draft warning/label after finalizing.
-4. Put `index.html` and `privacy.html` on the same static website. You can use the public `https://your-site.example/privacy.html` URL for Apple's privacy-policy requirement **only after** you finalize its content.
-5. If the app is publicly released, update *Coming to iPhone & iPad* / *coming soon* messaging in the announcement, FAQ, and final CTA to reflect actual availability.
-6. Recheck any claims about 30 looks, Free vs Pro features, transparent sprites, account requirements, and on-device processing against the final version you ship.
-7. Replace the illustrative preview images with screenshots/renderings of actual app output if you want screenshots to represent the renderer exactly.
-
-## Deployment
-
-This is a fully static site: upload both HTML files to any standard website hosting service (GitHub Pages, Netlify, Cloudflare Pages, Vercel static hosting, traditional HTTPS hosting, etc.). Serve `index.html` as the homepage and `privacy.html` as the privacy URL.
-
-The homepage embeds all its assets, so there is nothing to build or install. Its layout adapts to phones, tablets, and desktop screens. The page has no external scripts, fonts, image services, or analytics.
-
-## Tested
-
-Browser interaction tests in headless Chromium verified the two sample modes, style switching, pixel-size and before/after controls, local file upload, PNG download, dialog controls, and responsive mobile navigation. No JavaScript exceptions or horizontal overflows were observed at 1440 px and 390 px viewports. This does **not** substitute for manually checking Safari on iPhone and your deployed HTTPS website.
+Before publishing, confirm the final release build's privacy behavior and current App Store availability; prices are deliberately omitted because StoreKit shows localized live prices.
