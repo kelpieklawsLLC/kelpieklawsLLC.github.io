@@ -14,3 +14,63 @@
 
 /* Violet shared with the iOS app (StudioColors.violet). */
 :root{--violet:#5b52d1} .button{background:var(--violet)} .button:hover{background:#4941b4} .tabs button.active{color:#3e357d} input[type=range]{accent-color:var(--violet)} button:focus-visible,a:focus-visible,input:focus-visible,.hero-story button:focus-visible{outline-color:var(--violet)} .launch{background:#33275b}
+
+/* Night palette: violet accents, luminous type, and dark scrapbook surfaces. */
+:root{color-scheme:dark;--paper:#100e1a;--ink:#f0edf9;--muted:#bcb4ce;--line:#3b334e;--accent:#c6baff;--violet:#8f89ff;--surface:#211b30}
+body{background-image:radial-gradient(#c6baff16 .7px,transparent .7px)}
+header{background:#15111fee}h1 em{color:var(--accent)}
+.pill{border-color:#8f89ff}.button{background:#5b52d1;color:#fff;box-shadow:4px 5px 0 #342957}.button:hover{background:#6c62e1}
+.hero-output,.hero-inputs button,.reference-stamp,.demo-triptych figure,.calico-art figure{background:var(--surface);border-color:var(--line);box-shadow:0 12px 28px #0005}
+.hero-output>span,.hero-inputs button>span{background:var(--surface)}
+.hero-story::after,.detail-grid article>span{color:var(--accent)}
+.hero-story::before,.hero-story-note,.calico-spark{color:#d8b97c}
+.hero-output::before{background:#8272bacc}.hero-inputs button::before{background:#a37596dd}.hero-inputs button:last-child::before,.calico-reference::before{background:#8774b9dd}
+.ribbon{background:#2d2344;box-shadow:0 3px 0 #49365f;color:#e4dcff}
+.tabs button{background:#211b30;border-color:#493c60;box-shadow:0 3px 0 #100c1b;color:var(--ink)}
+.tabs button:hover{background:#38294e}.tabs button.active{background:#5b52d1;color:#fff;border-color:#aaa0ff;box-shadow:3px 4px 0 #382b5e}
+.demo-triptych figure:nth-child(2){background:#292039}.demo-triptych figure:nth-child(3){background:#302342}
+.demo-triptych figure::before{background:#9d7f92dd}.demo-triptych figure:nth-child(2)::before{background:#8c7baedd}.demo-triptych figure:nth-child(3)::before{background:#a18acbdd}
+.frame,.demo-image,.compare-stage,.compare-stage .before{background:#17131f}
+.tags span{background:#30253e;color:#e4dcf4}.process{background:#1c1729}.process li{border-color:var(--line)}
+.calico-feature{background:#191321}.launch{background:#241a3b;color:var(--ink)}.launch-pill{background:var(--accent);color:#211735}.launch>p:last-child{color:var(--muted)}
+dialog{color:var(--ink);border:1px solid var(--line)}dialog::backdrop{background:#08050ded}
+
+/* Let snippet heights reserve space so captions never collide with decoration. */
+.hero-story{padding:0 18px 10px}
+.hero-story::after{content:none}
+.hero-inputs{position:relative;inset:auto;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:start;gap:24px;height:auto;margin:36px -8px 0;pointer-events:auto}
+.hero-inputs button{position:relative;inset:auto!important;width:100%;max-width:none}
+.hero-inputs button:first-child{transform:rotate(-7deg)}
+.hero-inputs button:last-child{transform:rotate(7deg);margin-top:16px}
+.hero-inputs button:hover{transform:rotate(0) translateY(-4px)}
+.hero-story-note{position:relative;inset:auto;display:flex;justify-content:center;align-items:center;gap:14px;margin:48px 0 0;font:italic 21px/1.5 Georgia,serif;color:var(--accent);text-align:center}
+.hero-story-note::before{content:none}
+.hero-story-note span{font-style:normal;font-size:28px;color:#d8b97c}
+@media(max-width:650px){.hero-story{padding:0 12px 10px}.hero-inputs{gap:18px;margin-top:30px}.hero-story-note{margin-top:40px;font-size:18px}.hero-inputs button>span{font-size:10px;letter-spacing:0;gap:5px}}
+
+/* Compact editorial rhythm, with enough room for tilted cards and captions. */
+header{height:76px;padding-inline:5%}
+.hero{max-width:1240px;min-height:0;padding:38px 5% 42px;gap:42px;grid-template-columns:1fr 1fr}
+h1{font-size:clamp(56px,5.8vw,82px);line-height:1.04;margin:18px 0;letter-spacing:-2.5px}
+.intro{font-size:18px;line-height:1.65;margin:20px 0}.small{margin-top:12px}
+.hero-story{max-width:365px}.hero-story>.eyebrow{margin-bottom:18px;font-size:12px}
+.hero-output{padding:8px 8px 0}.hero-output>span{padding:12px 3px 16px;font-size:11px}
+.hero-inputs{margin-top:24px;gap:20px}.hero-inputs button{padding:6px 6px 0}.hero-inputs button>span{padding:10px 1px;font-size:10px}
+.hero-story-note{margin-top:30px;font-size:18px;gap:10px}.hero-story-note span{font-size:24px}
+.ribbon{padding:16px 20px;font-size:11px}
+.explore,.details{max-width:1360px;margin:auto;padding:52px 5%}
+h2{font-size:clamp(36px,3.8vw,54px);letter-spacing:-2px;margin-bottom:16px}
+.section-heading{margin-bottom:20px;gap:28px}.section-heading>p{margin-bottom:4px;max-width:420px;font-size:16px}
+.tabs{gap:9px;margin:22px 0 26px}.tabs button{padding:11px 17px;font-size:14px}
+.demo-heading{margin:20px 0 26px;gap:28px}.demo-heading h3{font-size:38px;margin:8px 0}.demo-heading>p{font-size:16px;line-height:1.65}
+.demo-triptych{gap:22px;padding:10px 0 14px}.demo-triptych figure{padding:9px 9px 0}.demo-triptych figure:nth-child(2){margin-top:12px}
+.demo-triptych figcaption{padding:13px 2px 15px;font-size:12px}.tags{margin:16px 0;gap:8px}.tags span{padding:8px 12px;font-size:12px}
+.compare-details{margin-top:16px}.compare-details summary{padding:17px 0;font-size:15px}.gallery-note{margin-top:14px}
+.calico-feature{padding:52px max(5%,calc((100vw - 1220px)/2)) 64px;gap:44px}
+.calico-copy h2{font-size:clamp(40px,4.6vw,62px)}.calico-copy>p{font-size:16px;line-height:1.65;margin-bottom:16px}.calico-copy>.calico-lead{font-size:22px}.calico-copy .button{margin-top:8px}
+.calico-art{max-width:410px;width:100%;justify-self:center;padding:0 12px 68px 20px}.calico-art figcaption{padding:12px 2px 5px}.calico-reference{left:0}.calico-spark{font-size:64px;right:0}
+.process{padding:50px max(5%,calc((100vw - 1220px)/2));gap:44px}.process li{padding:17px 0;gap:18px}.process h3,.details h3{font-size:22px;margin-bottom:8px}.process li p,.detail-grid p{line-height:1.65}
+.detail-grid{gap:32px;margin-top:26px}.detail-grid article>span{font-size:28px;margin-bottom:12px}
+.launch{padding:48px 5%}.launch h2{font-size:clamp(40px,4.5vw,62px);margin:18px 0}.launch-icon{width:72px;height:72px;border-radius:17px;margin:18px auto 12px}.launch-pill{padding:13px 22px;margin:8px 0 16px}
+footer{padding:26px 5%}
+@media(max-width:650px){header{height:68px}.hero{padding:28px 7% 35px;gap:32px}h1{font-size:58px}.intro{font-size:17px}.hero-story{max-width:330px}.hero-story::before{font-size:38px;right:0}.hero-inputs{gap:18px}.hero-story-note{margin-top:30px;font-size:17px}.ribbon{padding:14px 10px;font-size:9px}.explore,.details{padding:36px 6%}.section-heading>p{font-size:15px}.tabs{margin:18px 0 22px;gap:8px}.tabs button{font-size:12px;padding:10px 12px}.demo-heading{margin:18px 0 24px}.demo-heading h3{font-size:33px}.demo-heading>p{font-size:15px}.demo-triptych{gap:22px 14px}.demo-triptych figure{padding:6px 6px 0}.demo-triptych figcaption{font-size:10px;padding:10px 0 12px}.demo-triptych figure:nth-child(3){margin-top:4px}.demo-triptych figure:nth-child(3) figcaption{font-size:13px;padding:12px 2px}.calico-feature{padding:38px 7% 46px;gap:30px}.calico-copy>.calico-lead{font-size:21px}.calico-art{max-width:350px}.process{padding:36px 7%;gap:12px}.detail-grid{gap:18px}.launch{padding:36px 6%}footer{padding:24px 6%;gap:18px}}
